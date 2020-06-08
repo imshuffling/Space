@@ -1,0 +1,103 @@
+/* Task 1 */
+@media only screen and (min-width:1441px) {
+    .hero-wrap {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.hero .hero-image {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-unit-space-frontier a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero-unit-space-frontier .hero-image {
+	height: 960px;
+	background-image: url(/images/final-frontier_large.jpg)
+}
+@media only screen and (min-width:1441px) {
+	.hero-unit-space-frontier .hero-image {
+		background-position: 50%;
+	}
+}
+@media (-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi), only screen and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-resolution:1.5dppx) {
+	.hero-unit-space-frontier .hero-image {
+		background-image: url(/images/final-frontier_large_2x.jpg)
+	}
+}
+@media only screen and (max-width:1068px) {
+	.hero-unit-space-frontier .hero-image {
+		height: 712px;
+		background-image: url(/images/final-frontier_medium.jpg)
+	}
+}
+@media only screen and (max-width:1068px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (max-width:1068px) and (min-resolution:1.5dppx), only screen and (max-width:1068px) and (min-resolution:144dpi) {
+	.hero-unit-space-frontier .hero-image {
+		background-image: url(/images/final-frontier_medium_2x.jpg)
+	}
+}
+@media only screen and (max-width:735px) {
+	.hero-unit-space-frontier .hero-image {
+		height: 490px;
+		background-image: url(/images/final-frontier_small.jpg)
+	}
+}
+@media only screen and (max-width:735px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (max-width:735px) and (min-resolution:1.5dppx), only screen and (max-width:735px) and (min-resolution:144dpi) {
+	.hero-unit-space-frontier .hero-image {
+		background-image: url(/images/final-frontier_small_2x.jpg)
+	}
+}
+
+
+/* Task 2 */
+@media only screen and (min-width: 737px) {
+    .timeline-wrap {
+        width: 100%;
+        display: grid;
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(auto-fill, 540px);
+        grid-auto-rows: minmax(30px, auto);
+        justify-content: center;
+    }
+    .timeline-wrap .timeline-item {
+        width: 540px;
+    }
+    .timeline-1 { grid-row-end: span 2; }
+    .timeline-2 { grid-row-end: span 3; }
+    .timeline-3 { grid-row-end: span 4; }
+    .timeline-4 { grid-row-end: span 5; }
+    .timeline-5 { grid-row-end: span 6; }
+    .timeline-6 { grid-row-end: span 7; }
+}
+
+
+/* Task 3 */
+@supports not (display: grid) {
+    @media only screen and (min-width: 737px) {
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .grid-third {
+            width: 35%;
+        }
+
+        .grid-two-third {
+            width: 65%;
+        }
+
+        .grid-half {
+            width: 50%;
+        }
+    }
+}
